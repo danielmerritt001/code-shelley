@@ -1,8 +1,15 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Code
 
 
 # CBVs
+class CodeCreate(CreateView):
+  model = Code 
+  fields = '__all__'
+  success_url = '/codes/'
+
+
 
 # View Functions
 def home(request):
