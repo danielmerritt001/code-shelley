@@ -22,7 +22,16 @@
         <div class="card-content">
           <div class="card-img-container">
           </div>
-          <h2 class="card-title">{{ code.name }}</h2>
+          <h2 class="card-title">{{ code.name }}
+            {% if code.star %}
+            ⭐️
+            {% else %}
+            ✩
+            {% endif %}
+          </h2>
+          <div>
+            {{ code.description }}
+          </div>
         </div>
       </a>
     </div>
