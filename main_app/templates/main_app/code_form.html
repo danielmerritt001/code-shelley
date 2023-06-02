@@ -8,7 +8,11 @@
 {% block content %}
 
 <div class="page-header">
+  {% if code %}
+  <h1>Edit {{ code.name }}</h1>
+{% else %}
   <h1>Add Some Code</h1>
+{% endif %}
 </div>
 <form action="" method="post" class="form-container">
   {% csrf_token %}

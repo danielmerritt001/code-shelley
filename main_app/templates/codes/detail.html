@@ -20,6 +20,10 @@
     <p>{{ code.code}}</p>
     <p>{{ code.github}}</p>
     <p>{{ code.star }}</p>
+    <div class="code-actions">
+      <a href="{% url 'code-update' code.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'code-delete' code.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 

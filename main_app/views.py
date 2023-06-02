@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Code
 
 
@@ -9,7 +9,13 @@ class CodeCreate(CreateView):
   fields = '__all__'
   success_url = '/codes/'
 
+class CodeUpdate(UpdateView):
+  model = Code
+  fields = ['description', 'code', 'github', 'star']
 
+class CodeDelete(DeleteView):
+  model = Code
+  success_url = '/codes/'
 
 # View Functions
 def home(request):
