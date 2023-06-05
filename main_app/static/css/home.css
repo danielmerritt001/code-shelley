@@ -1,0 +1,23 @@
+main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.home-image1, .home-image2 {
+  width: 100%;
+  
+}
+
+.home-image1 {
+  border-left: 1px solid rgb(187,134,252);
+  border-bottom: 1px solid rgb(187,134,252);
+  border-right: 1px solid rgb(187,134,252);
+}
+
+.home-image2 {
+  border: 1px solid rgb(187,134,252);
+}
+
+#login {
+  margin: auto;
+}

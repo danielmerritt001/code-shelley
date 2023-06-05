@@ -6,15 +6,8 @@
 {% endblock %}
 
 {% block content %}
-
-<h1>About the Home Page</h1>
-<hr />
-<p class="page-content">
-  I like long romantic walks down the produce aisle. Also, I am currently job seeking!
-</p>
-
 {% if not user.is_authenticated %}
-<section>
+<section id="login">
   <form action="{% url 'home' %}" method="post" class="login">
     <h1>Login</h1>
     {% csrf_token %}
@@ -23,6 +16,20 @@
     <button type="submit" class="btn submit">Login</button>
   </form>
 </section>
+{% else %}
+<div>
+  Welcome User
+</div>
 {% endif %}
+
+<img class="home-image1" src="{% static 'images/django-code.png' %}" alt="">
+<img class="home-image2" src="{% static 'images/controller-code.png' %}" alt="">
+<div>
+  <h1>About the Home Page</h1>
+  <p class="page-content">
+    I like long romantic walks down the produce aisle. Also, I am currently job seeking!
+  </p>
+</div>
+
 
 {% endblock %}
