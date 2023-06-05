@@ -26,12 +26,12 @@ header {
   background-color: rgb(18,18,18);
   display: flex;
   justify-content: space-between;
-  margin: 0
+  margin: 0;
+  border-bottom: 1px solid rgb(20,218,198);;
 }
 
 nav {
   display: flex;
-  background-color: green;
 }
 
 .nav-logo {
@@ -42,9 +42,14 @@ nav {
 #navlinks {
   color: white;
   font-size: 18px;
-  border: solid black;
-  background-color: chocolate;
+  border-bottom: 1px solid rgb(20,218,198);
+  background-color: rgb(32,32,32);
   display: none;
+  justify-content: space-evenly;
+}
+
+a {
+  color: white;
 }
 
 a > img {
