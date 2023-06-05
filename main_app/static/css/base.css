@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: rgb(42,42,42);
+  background-color: rgb(18,18,18);
   color: rgb(255, 255, 255, .9);
   width: 100%;
   display: flex;
@@ -28,6 +28,10 @@ header {
   justify-content: space-between;
   margin: 0;
   border-bottom: 1px solid rgb(20,218,198);;
+}
+
+main {
+  background-color: rgb(42,42,42);
 }
 
 nav {
@@ -50,6 +54,10 @@ nav {
 
 a {
   color: white;
+}
+
+a:hover {
+  color: rgb(187,134,252);
 }
 
 a > img {
@@ -76,4 +84,16 @@ a > img {
 hr {
   color: rgb(187,134,252);
   color: rgb(20,218,198);
+}
+
+button {
+  border: none;
+  background-color: black;
+  color: rgb(20,218,198);
+  padding: 10px;
+}
+
+button:hover {
+  padding: 9px;
+  border: 1px solid rgb(20,218,198);
 }

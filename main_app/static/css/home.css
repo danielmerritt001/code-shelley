@@ -1,6 +1,8 @@
 main {
   display: grid;
   grid-template-columns: 50% 50%;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 .home-image1, .home-image2 {
@@ -20,4 +22,16 @@ main {
 
 #login {
   margin: auto;
+  padding: 15px;
+  background-color: rgb(18,18,18);
+  border: 1px solid rgb(20,218,198);
+}
+
+#welcome {
+  margin:auto
+}
+
+#about {
+  margin: auto;
+  padding: 50px
 }
