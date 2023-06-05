@@ -22,24 +22,21 @@
       <a href="/">
         <img 
           class="nav-logo"
-          src="{% static 'images/turtle-side.jpg' %}"
-          width="100px"
+          src="{% static 'images/turtle-logo.png' %}"
           alt="Code Shelley Logo"
         >
       </a>
     </div>
     <nav>
-      <ul>
         {% if user.is_authenticated %}
-        <li><a href="/">Home</a></li>
-        <li><a href="{% url 'code-create' %}">Create Code</a></li>
-        <li><a href="{% url 'code-index' %}">My Code</a></li>
-        <li><a href="{% url 'logout' %}">Log out</a></li>
+        <div><a href="/">Home</a></div>
+        <div><a href="{% url 'code-create' %}">Create Code</a></div>
+        <div><a href="{% url 'code-index' %}">My Code</a></div>
+        <div><a href="{% url 'logout' %}">Log out</a></div>
         {% else %}
-        <li><a href="{% url 'home' %}">Login</a></li>
-        <li><a href="{% url 'signup' %}">Sign Up</a></li>
+        <div><a href="{% url 'home' %}">Login</a></div>
+        <div><a href="{% url 'signup' %}">Sign Up</a></div>
         {% endif %}
-      </ul>
     </nav>
   </header>
   <main>
