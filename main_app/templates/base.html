@@ -12,7 +12,9 @@
     href=""
   >
   <title>Code Shelley</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+  <script defer src="{% static 'js/navbar.js' %}"></script>
   {% block head %}
   {% endblock %}
 </head>
@@ -29,14 +31,21 @@
     </div>
     <nav>
         {% if user.is_authenticated %}
-        <div><a href="/">Home</a></div>
-        <div><a href="{% url 'code-create' %}">Create Code</a></div>
-        <div><a href="{% url 'code-index' %}">My Code</a></div>
-        <div><a href="{% url 'logout' %}">Log out</a></div>
+        <div id="navlinks">
+          <a href="/">Home</a>
+          <a href="{% url 'code-create' %}">Create Code</a>
+          <a href="{% url 'code-index' %}">My Code</a>
+          <a href="{% url 'logout' %}">Log out</a>
+        </div>
         {% else %}
-        <div><a href="{% url 'home' %}">Login</a></div>
-        <div><a href="{% url 'signup' %}">Sign Up</a></div>
+        <div id="navlinks">
+          <a href="{% url 'home' %}">Login</a>
+          <a href="{% url 'signup' %}">Sign Up</a>
+        </div>
         {% endif %}
+        <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
     </nav>
   </header>
   <main>
