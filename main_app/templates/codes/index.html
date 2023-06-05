@@ -31,15 +31,17 @@
             <img class='language-image' src="{% static 'images/P.png' %}" alt="">
             {% endif %}
           </div>
-          <h2 class="card-title">{{ code.name }}
-            {% if code.star %}
-            ⭐️
-            {% else %}
-            ✩
-            {% endif %}
-          </h2>
-          <div>
-            {{ code.description }}
+          <div class="code-info">
+            <h2 class="card-title">{{ code.name }}
+              {% if code.star %}
+              ⭐️
+              {% else %}
+              ✩
+              {% endif %}
+            </h2>
+            <div id='code-description'>
+              {{ code.description }}
+            </div>
           </div>
         </div>
       </a>
