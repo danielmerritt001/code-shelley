@@ -12,7 +12,8 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: rgb(42,42,42);
+  color: rgb(255, 255, 255, .9);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -22,7 +23,7 @@ body {
 }
 
 header {
-  background-color: white;
+  background-color: rgb(18,18,18);
   display: flex;
   justify-content: space-between;
   margin: 0
@@ -34,7 +35,7 @@ nav {
 }
 
 .nav-logo {
-  width: 50px;
+  width: 30px;
   margin-left: 15px;
 }
 
@@ -51,16 +52,23 @@ a > img {
 }
 
 .hamburger-icon {
-  .topnav a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
+  background: black;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 8px;
 }
 
-.hamburger-icon:hover {
-  background-color: #ddd;
-  color: black;
+.fa {
+  font-size: 24px;
+  color: rgb(20,218,198);
+}
+
+.hamburger-icon:hover, .fa:hover {
+  color: rgb(187,134,252)
+}
+
+hr {
+  color: rgb(187,134,252);
+  color: rgb(20,218,198);
 }
