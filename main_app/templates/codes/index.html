@@ -17,10 +17,19 @@
 
 <section class="card-container">
   {% for code in codes %}
-    <div class="card">
-      <a href="{% url 'code-detail' code.id %}">
+    <div class="card" id="{{ code.language }}">
+      <a id="card-link" href="{% url 'code-detail' code.id %}">
         <div class="card-content">
           <div class="card-img-container">
+            {% if code.language == 'H' %}
+            <img class='language-image' src="{% static 'images/H.png' %}" alt="">
+            {% elif code.language == 'J' %}
+            <img class='language-image' src="{% static 'images/J.png' %}" alt="">
+            {% elif code.language == 'C' %}
+            <img class='language-image' src="{% static 'images/C.png' %}" alt="">
+            {% elif code.language == 'P' %}
+            <img class='language-image' src="{% static 'images/P.png' %}" alt="">
+            {% endif %}
           </div>
           <h2 class="card-title">{{ code.name }}
             {% if code.star %}

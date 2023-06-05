@@ -1,0 +1,29 @@
+.card-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#card-link {
+  width: 100%;
+}
+
+.card {
+  border: 1px solid rgb(20,218,198);
+  width: 200px;
+  margin: 10px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(32, 32, 32);
+}
+
+.card-img-container {
+  width: 50px;
+  margin-top: 5px;
+  margin-left: 145px;
+}
+
+.language-image {
+  width: 100%;
+}
