@@ -1,6 +1,4 @@
-main {
-  max-width: 1250px;
-}
+
 
 .code-img {
   width: 100px;
@@ -45,4 +43,11 @@ main {
 .btn:hover {
   padding: 9px;
   border: 1px solid rgb(20,218,198);
+}
+
+@media screen and (min-width: 1000px) {
+  main{
+    width: 1000px;
+    margin: auto;
+  }
 }
