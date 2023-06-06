@@ -21,15 +21,7 @@
       <a id="card-link" href="{% url 'code-detail' code.id %}">
         <div class="card-content">
           <div class="card-img-container">
-            {% if code.language == 'H' %}
-            <img class='language-image' src="{% static 'images/H.png' %}" alt="">
-            {% elif code.language == 'J' %}
-            <img class='language-image' src="{% static 'images/J.png' %}" alt="">
-            {% elif code.language == 'C' %}
-            <img class='language-image' src="{% static 'images/C.png' %}" alt="">
-            {% elif code.language == 'P' %}
-            <img class='language-image' src="{% static 'images/P.png' %}" alt="">
-            {% endif %}
+            <img class='language-image' src="{% static 'images/'|add:code.language|add:'.png' %}" alt="">
           </div>
           <div class="code-info">
             <h2 class="card-title">{{ code.name }}
