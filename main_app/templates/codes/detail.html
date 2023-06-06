@@ -13,6 +13,7 @@
 
 <section class="code-container">
   <div class="code-img">
+    <img class='language-image' src="{% static 'images/'|add:code.language|add:'.png' %}" alt="">
   </div>
   <div class="code-details">
     <h1>{{ code.name }}
@@ -22,9 +23,9 @@
       ✩
       {% endif %}
     </h1>
-    <p>{{ code.description }}</p>
-    <p>{{ code.code}}</p>
-    <p>{{ code.github}}</p>
+    <p class='code-description'>{{ code.description }} </br> *copy code below*</p>
+    <p class='code-code'>{{ code.code}}</p>
+    <p>Github Repo: {{ code.github}}</p>
     <div class="code-actions">
       <a href="{% url 'code-update' code.id %}" class="btn warn">Edit</a>
       <a href="{% url 'code-delete' code.id %}" class="btn danger">Delete</a>

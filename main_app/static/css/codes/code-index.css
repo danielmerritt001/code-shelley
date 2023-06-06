@@ -46,3 +46,14 @@
   background-color: rgb(18,18,18);
   border: 1px solid black;
 }
+
+.page-header, .page-footer {
+  color: green;
+  text-align: center;
+}
+
+.no-code {
+  color: green;
+  width: 300px;
+  margin: auto;
+}

@@ -12,9 +12,10 @@
 {% block content %}
 
 <section class="page-header">
-  <h1>Code List</h1>
+  <h1>#----------Code Beneath----------#</h1>
 </section>
 
+{% if codes %}
 <section class="card-container">
   {% for code in codes %}
     <div class="card" id="{{ code.language }}">
@@ -40,5 +41,12 @@
     </div>
   {% endfor %}
 </section>
-
+{% else %}
+<section class="no-code">
+  <h1>/* AAU, I would like to be able to add code by clicking the "Create Code" button in the navbar, so that I can add code which will then populate the "My Code" Section */</h1>
+</section>
+{% endif %}
+<section class="page-footer">
+  <h1>#----------End Code Section----------#</h1>
+</section>
 {% endblock %}

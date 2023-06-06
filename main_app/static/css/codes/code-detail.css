@@ -1,0 +1,48 @@
+main {
+  max-width: 1250px;
+}
+
+.code-img {
+  width: 100px;
+  margin: 10px auto;
+}
+
+.language-image {
+  width: 100%;
+}
+
+.code-details {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 40px;
+  border: 1px solid rgb(20,218,198);
+  padding: 10px;
+}
+
+.code-description {
+  font-style: italic;
+}
+
+.code-code {
+  border: 1px solid rgb(20,218,198);
+  padding: 10px;
+  
+}
+
+.code-actions {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  background-color: black;
+  color: rgb(20,218,198);
+  padding: 10px;
+}
+
+.btn:hover {
+  padding: 9px;
+  border: 1px solid rgb(20,218,198);
+}
