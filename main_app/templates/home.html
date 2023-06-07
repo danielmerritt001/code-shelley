@@ -14,7 +14,9 @@
     {{ form.as_p }}
     <input type="hidden" name="next" value="{{ next }}">
     <button type="submit" class="btn submit">Login</button>
+    <a class='signup-home' href="{% url 'signup' %}">Sign Up</a>
   </form>
+  <div class='login-intro'>Code Shelley is an online code bookshelf. </br>See an example <a href="{% url 'dan-index' %}">here</a>.</div>
 </section>
 {% else %}
 <div id='welcome'>

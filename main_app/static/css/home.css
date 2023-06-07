@@ -39,3 +39,20 @@ main {
 .page-content {
   text-align: center;
 }
+
+.login-intro {
+  margin-top: 10px;
+}
+
+.signup-home {
+  border: none;
+  background-color: black;
+  color: rgb(20,218,198);
+  padding: 10px;
+  font-size: 11px;
+}
+
+.signup-home:hover {
+  padding: 9px;
+  border: 1px solid rgb(20,218,198);
+}
