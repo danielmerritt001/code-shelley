@@ -35,3 +35,7 @@ main {
   margin: auto;
   padding: 50px
 }
+
+.page-content {
+  text-align: center;
+}
