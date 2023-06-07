@@ -88,6 +88,36 @@ hr {
   color: rgb(20,218,198);
 }
 
+.confirm-delete{
+  margin: auto;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.delete-h1, .delete-h2, #delete-form {
+  text-align: center;
+}
+
+#cancel-delete{
+  border: none;
+  background-color: black;
+  color: rgb(20,218,198);
+  padding: 10px;
+  font-size: 11px;
+}
+
+#delete-form {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: auto;
+}
+
+#cancel-delete:hover {
+  padding: 9px;
+  border: 1px solid rgb(20,218,198);
+}
+
 button {
   border: none;
   background-color: black;

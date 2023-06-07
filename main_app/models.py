@@ -18,7 +18,9 @@ class Code(models.Model):
     choices=LANGUAGES,
     default=LANGUAGES[0][0])
   code = models.TextField(max_length=500)
-  github = models.CharField(max_length=100)
+  github = models.URLField(
+    max_length=200,
+    default="https://www.youtube.com/watch?v=b4jwe4TcqIw&ab_channel=BenManley")
   star = models.BooleanField()
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
