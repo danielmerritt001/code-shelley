@@ -16,11 +16,18 @@
     <button type="submit" class="btn submit">Login</button>
     <a class='signup-home' href="{% url 'signup' %}">Sign Up</a>
   </form>
-  <div class='login-intro'>Code Shelley is an online code bookshelf. </br>See an example <a href="{% url 'dan-index' %}">here</a>.</div>
+  <div class='login-intro'>Code Shelley is an online code bookshelf. </br>See an example of a code index <a href="{% url 'dan-index' %}">here</a>.</div>
 </section>
 {% else %}
 <div id='welcome'>
-  Welcome User
+  <div id='welcome-card'>
+    <h1>Welcome <a href="{% url 'dan-index' %}">{{ user }}</a></div> </h1>
+    <div class='home-user-stories'>/* AAU, I would like to be able to click 'Create Code' in the navbar, so that I may create code cards. */</div>
+    <br>
+    <div class='home-user-stories'>/* AAU, I would like to be able to click 'My Code' in the navbar, so that I may view the code cards I have created. */</div>
+    <br>
+    <div class='home-user-stories'>/* AAU, I would like to be able to click on some link so, that I may view an example code index. I would prefer that you don't use the user's name as the link. That would be a confusing and self-referential joke, Daniel. Users will certainly click their name before reading this user story. */</div>
+  </div>
 </div>
 {% endif %}
 
