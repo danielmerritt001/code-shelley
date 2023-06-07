@@ -34,12 +34,15 @@ class CodeDelete(LoginRequiredMixin, DeleteView):
 
 # View Functions
 
+def dan_index(request):
+  codes = Code.objects.filter(user=1)
+  return render(request, 'codes/index.html', { 'codes' : codes})
+
 @login_required
 def code_index(request):
   codes = Code.objects.filter(user=request.user)
   return render(request, 'codes/index.html', { 'codes' : codes})
 
-@login_required
 def code_detail(request, code_id):
   code = Code.objects.get(id=code_id)
   return render(request, 'codes/detail.html', { 'code': code })
