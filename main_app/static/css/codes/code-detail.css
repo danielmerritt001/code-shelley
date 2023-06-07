@@ -19,12 +19,13 @@
 
 .code-description {
   font-style: italic;
+  font-size: 12px;
 }
 
 .code-code {
   border: 1px solid rgb(20,218,198);
   padding: 10px;
-  
+  font-size: 18px;
 }
 
 .code-actions {
@@ -43,6 +44,14 @@
 .btn:hover {
   padding: 9px;
   border: 1px solid rgb(20,218,198);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.github {
+  font-size: 18px;
 }
 
 @media screen and (min-width: 1000px) {

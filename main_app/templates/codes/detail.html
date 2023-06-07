@@ -25,7 +25,7 @@
     </h1>
     <p class='code-description'>{{ code.description }} </br> *copy code below*</p>
     <p class='code-code'>{{ code.code}}</p>
-    <p>Github Repo: {{ code.github}}</p>
+    <p class='github'><a href="{{ code.github}}">Click Here for a Github Repo Reference</a></p>
     <div class="code-actions">
       <a href="{% url 'code-update' code.id %}" class="btn warn">Edit</a>
       <a href="{% url 'code-delete' code.id %}" class="btn danger">Delete</a>
