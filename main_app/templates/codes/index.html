@@ -18,27 +18,54 @@
 {% if codes %}
 <section class="card-container">
   {% for code in codes %}
-    <div class="card" id="{{ code.language }}">
-      <a id="card-link" href="{% url 'code-detail' code.id %}">
-        <div class="card-content">
-          <div class="card-img-container">
-            <img class='language-image' src="{% static 'images/'|add:code.language|add:'.png' %}" alt="">
-          </div>
-          <div class="code-info">
-            <h2 class="card-title">{{ code.name }}
-              {% if code.star %}
-              ⭐️
-              {% else %}
-              ✩
-              {% endif %}
-            </h2>
-            <div id='code-description'>
-              {{ code.description }}
+    {% if code.star %}
+      <div class="card" id="{{ code.language }}">
+        <a id="card-link" href="{% url 'code-detail' code.id %}">
+          <div class="card-content">
+            <div class="card-img-container">
+              <img class='language-image' src="{% static 'images/'|add:code.language|add:'.png' %}" alt="">
+            </div>
+            <div class="code-info">
+              <h2 class="card-title">{{ code.name }}
+                {% if code.star %}
+                ⭐️
+                {% else %}
+                ✩
+                {% endif %}
+              </h2>
+              <div id='code-description'>
+                {{ code.description }}
+              </div>
             </div>
           </div>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+  {% for code in codes %}
+    {% if not code.star %}
+      <div class="card" id="{{ code.language }}">
+        <a id="card-link" href="{% url 'code-detail' code.id %}">
+          <div class="card-content">
+            <div class="card-img-container">
+              <img class='language-image' src="{% static 'images/'|add:code.language|add:'.png' %}" alt="">
+            </div>
+            <div class="code-info">
+              <h2 class="card-title">{{ code.name }}
+                {% if code.star %}
+                ⭐️
+                {% else %}
+                ✩
+                {% endif %}
+              </h2>
+              <div id='code-description'>
+                {{ code.description }}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endif %}
   {% endfor %}
 </section>
 {% else %}
